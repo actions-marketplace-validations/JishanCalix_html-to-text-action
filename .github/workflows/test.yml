@@ -11,7 +11,7 @@ jobs:
               uses: actions/checkout@v3
 
             - name: Run my action  
-              uses: JishanCalix/html-to-text-action
+              uses: JishanCalix/html-to-plain-text@v2
               id: myaction
               with:
                 HTML_TEXT: '<div title="Status of coverage:&#10; 🟢 - ok&#10; 🟡 - slightly more than threshold&#10; 🔴 - under the threshold">St.<sup>:grey_question:</sup></div>'
