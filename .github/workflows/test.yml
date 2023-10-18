@@ -1,0 +1,21 @@
+name: Test
+
+on:
+    push:
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v3
+
+            - name: Run my action  
+              uses: JishanCalix/html-to-text@v1
+              id: myaction
+              with:
+                HTML_TEXT: '<div title="Status of coverage:&#10; 🟢 - ok&#10; 🟡 - slightly more than threshold&#10; 🔴 - under the threshold">St.<sup>:grey_question:</sup></div>'
+
+            - name: Show output
+              run: echo '${{ steps.myaction.outputs.plainText }}'
+              shell: bash
