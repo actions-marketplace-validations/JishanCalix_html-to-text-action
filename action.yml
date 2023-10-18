@@ -1,0 +1,12 @@
+name: 'HTML to Plain Text'
+description: 'This action converts html text to plain text'
+author: 'Jishan Shaikh'
+
+inputs:
+  HTML_TEXT:
+    description: 'HTML in text format, does not accepts html file or path'
+    required: true
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
